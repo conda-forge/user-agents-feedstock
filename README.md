@@ -11,6 +11,18 @@ Summary: A library to identify devices (phones, tablets) and their capabilities 
 
 
 
+Current build status
+====================
+
+Linux: [![Circle CI](https://circleci.com/gh/conda-forge/user-agents-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/user-agents-feedstock)
+OSX: [![TravisCI](https://travis-ci.org/conda-forge/user-agents-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/user-agents-feedstock)
+Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/user-agents-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/user-agents-feedstock/branch/master)
+
+Current release info
+====================
+Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/user-agents/badges/version.svg)](https://anaconda.org/conda-forge/user-agents)
+Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/user-agents/badges/downloads.svg)](https://anaconda.org/conda-forge/user-agents)
+
 Installing user-agents
 ======================
 
@@ -31,7 +43,6 @@ It is possible to list all of the versions of `user-agents` available on your pl
 ```
 conda search user-agents --channel conda-forge
 ```
-
 
 
 About conda-forge
@@ -67,18 +78,6 @@ Terminology
 
 **conda-forge** - the place where the feedstock and smithy live and work to
                   produce the finished article (built conda distributions)
-
-Current build status
-====================
-
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/user-agents-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/user-agents-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/user-agents-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/user-agents-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/user-agents-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/user-agents-feedstock/branch/master)
-
-Current release info
-====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/user-agents/badges/version.svg)](https://anaconda.org/conda-forge/user-agents)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/user-agents/badges/downloads.svg)](https://anaconda.org/conda-forge/user-agents)
 
 
 Updating user-agents-feedstock
