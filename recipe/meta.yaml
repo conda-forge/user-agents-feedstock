@@ -1,20 +1,22 @@
 {%set name = "user-agents" %}
-{%set version = "1.0.1" %}
+{%set version = "1.1.0" %}
+{%set compress_type = "tar.gz" %}
 {%set hash_type = "sha256" %}
-{%set hash_val = "b5976d971e9e55ec8d80f6c6428f6de5de1467844a0d37184b5ee5e40929e939" %}
+{%set hash_val = "643d16772280052b546d956971d719989ef6dc9b17d9ff0386aa21391a038039" %}
+{%set build_num = "0" %}
 
 package:
   name: {{ name }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  fn: {{ name }}-{{ version }}.{{ compress_type }}
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ compress_type }}
   {{ hash_type }}: {{ hash_val }}
 
 build:
-  skip: True  # [py35]
-  number: 1
+  skip: True  # [py>34]
+  number: {{ build_num }}
   script: python setup.py install --single-version-externally-managed --record=record.txt
 
 requirements:
@@ -33,8 +35,10 @@ test:
 about:
   home: https://github.com/selwin/python-user-agents
   license: MIT
+  license_family: MIT
   license_file: LICENSE.txt
   summary: 'A library to identify devices (phones, tablets) and their capabilities by parsing (browser/HTTP) user agent strings'
+  dev_url: https://github.com/selwin/python-user-agents
 
 extra:
   recipe-maintainers:
