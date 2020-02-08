@@ -1,4 +1,4 @@
-{% set version = "2.0" %}
+{% set version = "2.1" %}
 
 package:
   name: user-agents
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/u/user-agents/user-agents-{{ version }}.tar.gz
-  sha256: 792869b990a244f71efea1cb410ecaba99a270a64c5ac37d365bde5d70d6a2fa
+  sha256: da54371d856c35d8ead0622da24ad5ef6d667eda3629a750e3373a3e847a054b
 
 build:
   number: 0
