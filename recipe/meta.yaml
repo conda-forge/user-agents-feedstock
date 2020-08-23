@@ -11,7 +11,7 @@ source:
 build:
   number: 0
   noarch: python
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -19,11 +19,15 @@ requirements:
     - pip
   run:
     - python
-    - ua-parser >=0.8.0
+    - ua-parser >=0.10.0
 
 test:
   imports:
     - user_agents
+  commands:
+    - pip check
+  requires:
+    - pip
 
 about:
   home: https://github.com/selwin/python-user-agents
