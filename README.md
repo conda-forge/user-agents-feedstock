@@ -5,7 +5,7 @@ Home: https://github.com/selwin/python-user-agents
 
 Package license: MIT
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: A library to identify devices (phones, tablets) and their capabilities by parsing (browser/HTTP) user agent strings
 
