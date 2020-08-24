@@ -1,4 +1,4 @@
-{% set version = "2.1" %}
+{% set version = "2.2.0" %}
 
 package:
   name: user-agents
@@ -6,12 +6,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/u/user-agents/user-agents-{{ version }}.tar.gz
-  sha256: da54371d856c35d8ead0622da24ad5ef6d667eda3629a750e3373a3e847a054b
+  sha256: d36d25178db65308d1458c5fa4ab39c9b2619377010130329f3955e7626ead26
 
 build:
   number: 0
   noarch: python
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -19,18 +19,22 @@ requirements:
     - pip
   run:
     - python
-    - ua-parser >=0.8.0
+    - ua-parser >=0.10.0
 
 test:
   imports:
     - user_agents
+  commands:
+    - pip check
+  requires:
+    - pip
 
 about:
   home: https://github.com/selwin/python-user-agents
   license: MIT
   license_family: MIT
   license_file: LICENSE.txt
-  summary: 'A library to identify devices (phones, tablets) and their capabilities by parsing (browser/HTTP) user agent strings'
+  summary: A library to identify devices (phones, tablets) and their capabilities by parsing (browser/HTTP) user agent strings
   dev_url: https://github.com/selwin/python-user-agents
 
 extra:
