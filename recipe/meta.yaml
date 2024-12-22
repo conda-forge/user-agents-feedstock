@@ -5,20 +5,20 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/u/user-agents/user-agents-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/u/user-agents/user-agents-{{ version }}.tar.gz
   sha256: d36d25178db65308d1458c5fa4ab39c9b2619377010130329f3955e7626ead26
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python
+    - python {{ python_min }}
     - pip
   run:
-    - python
+    - python >={{ python_min }}
     - ua-parser >=0.10.0
 
 test:
@@ -28,6 +28,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/selwin/python-user-agents
